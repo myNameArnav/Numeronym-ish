@@ -4,8 +4,7 @@ from bs4 import BeautifulSoup
 sentenceSplit = ['hate', 'in', 'the', 'nation']
 elements = len(sentenceSplit)
 pspelling = []
-for i in range(0, elements-1):
-    i = i + 1
+for i in range(0, elements):
     word = str(sentenceSplit[i])
     url = "https://www.lexico.com/en/definition/" + word + "/"
     print(url)
@@ -15,4 +14,5 @@ for i in range(0, elements-1):
     line = soup.find(class_ = "phoneticspelling").text
     spelling = line.replace("/", "")
     pspelling.append(spelling)
+    i = i + 1
 print(pspelling)
