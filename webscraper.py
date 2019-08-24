@@ -2,11 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 
 sentenceSplit = ['hate', 'in', 'the', 'nation']
-elements = int(len(sentenceSplit))
+elements = len(sentenceSplit)
 pspelling = []
-for i in range(-1, elements-1):
+for i in range(0, elements-1):
     i = i + 1
-    url = "https://www.lexico.com/en/definition/" + str(sentenceSplit[i]) + "/"
+    word = str(sentenceSplit[i])
+    url = "https://www.lexico.com/en/definition/" + word + "/"
     print(url)
     r = requests.get(url)
     html_content = r.text
