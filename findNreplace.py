@@ -16,8 +16,6 @@ for i in range(0,len(sentenceSplit)):
     findingword = sentenceSplit[i]
     for j in range(0, len(numPspelling)):
         findingnum = numPspelling[j]
+        #Main Logic
         j = j + 1
     i = i + 1
-    
-print(findingnum, findingword)
-
