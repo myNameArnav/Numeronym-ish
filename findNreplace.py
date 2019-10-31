@@ -1,22 +1,34 @@
 sentence = 'hate in the nation'
 sentenceSplit = ['hate', 'in', 'the', 'nation']
-pspelling = ['ðɛː', 'ɪz', 'ə', 'lɒt', 'ɒv', 'heɪt', 'ɪn', 'ðə', 'ˈneɪʃ(ə)n', 'wɪð', 'mɔː', 'heɪt']
-numPspelling = ['wʌn', 'tuː', 'θriː', 'fɔː', 'fʌɪv', 'sɪks', 'ˈsɛv(ə)n', 'eɪt', 'nʌɪn', 'ˈzɪərəʊ']
+pspelling = ['heɪt', 'ɪn', 'ðə', 'ˈneɪʃ(ə)n']
+numPspelling = ['wʌn', 'tuː', 'θriː', 'fɔː', 'fʌɪv',
+				'sɪks', 'ˈsɛv(ə)n', 'eɪt', 'nʌɪn', 'ˈzɪərəʊ']
+space = " "
+nospace = ""
+wordMatch = []
 #numspelling = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'zero']
 num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-sentence1 = 'hate in the nation'
-#check if pspelling has any of numPspelling in them
+#combined = {'1': 'wʌn', '2': 'tuː', '3': 'θriː', '4': 'fɔː', '5': 'fʌɪv','6': 'sɪks', '7': 'ˈsɛv(ə)n', '8': 'eɪt', '9': 'nʌɪn', '0': 'ˈzɪərəʊ'}
 
-combined = {'1': 'wʌn', '2': 'tuː', '3': 'θriː', '4': 'fɔː', '5': 'fʌɪv', '6': 'sɪks', '7': 'ˈsɛv(ə)n', '8': 'eɪt', '9': 'nʌɪn', '0': 'ˈzɪərəʊ'}
-print(sentenceSplit)
-
-for j in range(0, len(numPspelling)):
-    for i in range(0, len(pspelling)):
-        subfinder = pspelling[i].find(numPspelling[j])
-        if subfinder != -1:
-            print()
-        else:
-            print()
-        print(subfinder,pspelling[i],numPspelling[j])
-        i = i + 1
-    j = j + 1
+#----------Logic-----------#
+i, j, a, b, c = 0, 0, 0, 0, 0
+for i in range(len(pspelling)):
+	singleWordno = nospace.join(pspelling[i]).split()
+	singleWord = space.join(pspelling[i]).split()
+	print("<      " + str(singleWord))
+	for j in range(len(numPspelling)):
+		singleNum = space.join(numPspelling[j]).split()
+		singleNumno = nospace.join(numPspelling[j]).split()
+		# print(singleNum)
+		wordMatch = []
+		for a in range(len(singleNum)):
+			for b in range(len(singleWord)):
+				if len(singleNum) <= len(singleWord):
+					if singleNum[a] == singleWord[b]:
+						wordMatch.extend(singleNum)
+						if len(wordMatch) >= 3:
+							for c in range(len(numPspelling)):
+								if "".join(str(wordMatch)) == "".join(str(numPspelling[c])):
+									print(wordMatch)
+								else:
+									pass
