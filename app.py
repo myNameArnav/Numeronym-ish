@@ -1,7 +1,14 @@
-def sentence():
-	inputSentence = input("Write a sentence: ")
+import Numeronym.webscraper
+import Numeronym.findNreplace2
+
+sentenceSplit = ''
+pspelling = []
+
+inputSentence = input("Write a sentence: ")
+
+def sentence(inputSentence):
 	sentenceSplit = inputSentence.split()
-	lenSentence = len(sentenceSplit)
 	print(sentenceSplit)
-	
-sentence()
+
+sentence(inputSentence)
+phoneticspelling(sentenceSplit)
