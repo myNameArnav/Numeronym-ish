@@ -1,5 +1,4 @@
-import Numeronym.app
-import Numeronym.findNreplace2
+# coding=utf-8
 import requests
 from bs4 import BeautifulSoup
 
@@ -18,7 +17,5 @@ def phoneticspelling(sentenceSplit):
         spelling = line.replace("/", "")
         pspelling.append(spelling)
         i = i + 1
-        print(str(i) + "th word is " + str(sentenceSplit[i]))
-    print(pspelling)
-
-findNreplace(pspelling)
+        #print(str(i) + "th word is " + str(sentenceSplit[i]))
+    return pspelling

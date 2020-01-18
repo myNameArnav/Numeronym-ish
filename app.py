@@ -1,14 +1,18 @@
-import Numeronym.webscraper
-import Numeronym.findNreplace2
+# coding=utf-8
 
-sentenceSplit = ''
+from webscraper import *
+
+sentenceSplit = ""
 pspelling = []
 
 inputSentence = input("Write a sentence: ")
 
 def sentence(inputSentence):
 	sentenceSplit = inputSentence.split()
-	print(sentenceSplit)
+	return sentenceSplit
 
 sentence(inputSentence)
+print(sentenceSplit)
 phoneticspelling(sentenceSplit)
+print(pspelling)
+
