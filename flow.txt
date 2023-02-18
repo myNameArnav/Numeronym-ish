@@ -1,0 +1,8 @@
+1.  Download IPA.json
+2.  Input sentence
+3.  Change Sentence to IPA
+4.  Do find a replace in the matching 
+    words
+5.  Change the words are not changed 
+    with the words that are changed
+6.  Profit
