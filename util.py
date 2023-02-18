@@ -39,14 +39,14 @@ def areEqual(*args) -> tuple[bool, int]:
     for elements in args:
         pass
 
-def findAndReplace(ipaSentence:str, replaceDict:dict[str,str]):
-    
+
+def findAndReplace(ipaSentence: str, replaceDict: dict[str, str]):
     result = []
-    
+
     for ipaWord in ipaSentence:
         try:
             result.append(replaceDict[ipaWord])
         except KeyError:
             result.append(ipaWord)
-    
+
     return result

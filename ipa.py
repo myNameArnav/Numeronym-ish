@@ -13,11 +13,11 @@ def numbersIPA(json: dict) -> list[str]:
         json["ten"],
     ]
     result = cleanIPA(ipaNumbers)
-    
+
     return result
 
 
-def transformSentence(numbersIPA: list, ipaSentence: str) -> dict[str,str]:
+def transformSentence(numbersIPA: list, ipaSentence: str) -> dict[str, str]:
     import re
 
     replaceDict = {}
@@ -28,7 +28,7 @@ def transformSentence(numbersIPA: list, ipaSentence: str) -> dict[str,str]:
 
             if search != None:
                 search = search.span()
-                replaced = word[:search[0]] + str(counter) + word[search[1] :]
+                replaced = word[: search[0]] + str(counter) + word[search[1] :]
                 replaceDict[word] = replaced
 
     return replaceDict
@@ -66,6 +66,7 @@ def cleanIPA(ipaSentence: list[str]) -> list[str]:
             ipaCleanSentence.append(word)
 
     return ipaCleanSentence
+
 
 def ipaToWords(sentence: str, ipaSentence: str, transformedSentence: str) -> list[str]:
     finalSentence = []
