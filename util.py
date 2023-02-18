@@ -50,3 +50,7 @@ def findAndReplace(ipaSentence: str, replaceDict: dict[str, str]):
             result.append(ipaWord)
 
     return result
+
+
+def arrayAsString(array: list):
+    print(" ".join(x for x in array))
