@@ -47,3 +47,7 @@ Contributions are welcome! If you'd like to add new features, improve existing o
 ## Acknowledgments
 
 Numeronym was inspired by the creative ways text can be transformed while retaining phonetic similarities.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
