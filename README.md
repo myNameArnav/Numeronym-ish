@@ -12,4 +12,4 @@ For Example:
 1. Clone repo
 2. (optional) make virtualenv
 3. Install requirements `pip install -r requirements.txt`
-4. Run `python app.py`
+4. Run `python main.py`
