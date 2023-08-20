@@ -12,7 +12,7 @@ def main():
     ipaNumbers = numbersIPA(ipaJSON)
     sentence = input("Enter a sentence: ")
     ipaSentence = changeToIPA(ipaJSON, sentence)
-    transformedSentence = transformSentence(ipaNumbers, ipaSentence)
+    transformedSentence = transformSentence(ipaNumbers, ipaSentence, sentence)
     findReplace = findAndReplace(ipaSentence, transformedSentence)
     finalSentence = ipaToWords(sentence, ipaSentence, findReplace)
     arrayAsString(finalSentence)
